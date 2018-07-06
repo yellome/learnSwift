@@ -1,7 +1,7 @@
 var playerName: [String] = []
 var playerZip: [Int] = []
 var playerNumberOfGames: [Int] = []
-var playerHighScore: [Int] = []
+var playerScore: [Int] = []
 
 var numberOfPlayers = 0
 
@@ -9,35 +9,47 @@ func initialize() {
     numberOfPlayers = 0
 }
 
-func reportScore(name: String, zipCode: Int, numberOfGames: Int, highScore: Int){
-    playerName.append(name)
-    playerZip.append(zipCode)
-    playerNumberOfGames.append(numberOfGames)
-    playerHighScore.append(highScore)
-    
-    numberOfPlayers += 1
+func reportScore(name: String, zipCode: Int, score: Int){
+    var isNew = true
+    if numberOfPlayers != 0 {
+        for person in 1...numberOfPlayers {
+            if name == playerName[person - 1] {
+                isNew = false
+                playerNumberOfGames[person - 1] += 1
+            }
+            if score > playerScore[person - 1] {
+                playerScore[person - 1] = score
+            }
+        }
+    }
+    if isNew {
+        numberOfPlayers += 1
+        playerName.append(name)
+        playerZip.append(zipCode)
+        playerNumberOfGames.append(1)
+        playerScore.append(score)
+    }
 }
 
 func printHighScore(of: [Int]){
-    var highScore = playerHighScore[0]
+    var highScore = playerScore[0]
     var highScoreIndex = 0
-    for number in 1...numberOfPlayers - 1{
-            if highScore < playerHighScore[number]{
-            highScore = playerHighScore[number]
-            highScoreIndex = number
+    for number in 1...numberOfPlayers {
+            if highScore < playerScore[number - 1]{
+            highScore = playerScore[number - 1]
+            highScoreIndex = number - 1
         }
     }
-    print("HIGH SCORE:" + "\n name: " + playerName[highScoreIndex] + "\n zipcode: " +  String(playerZip[highScoreIndex]) + "\n number of games played: " + String(playerNumberOfGames[highScoreIndex]) + "\n high score: " + String(playerHighScore[highScoreIndex]))
+    print("HIGH SCORE:" + "\n name: " + playerName[highScoreIndex] + "\n zipcode: " +  String(playerZip[highScoreIndex]) + "\n number of games played: " + String(playerNumberOfGames[highScoreIndex]) + "\n score: " + String(playerScore[highScoreIndex]))
 }
 
 initialize()
 
-reportScore(name: "A", zipCode: 94022, numberOfGames: 20, highScore: 98)
-reportScore(name: "B", zipCode: 94040, numberOfGames: 13, highScore: 85)
-reportScore(name: "C", zipCode: 78731, numberOfGames: 79, highScore: 46)
-reportScore(name: "D", zipCode: 78701, numberOfGames: 3, highScore: 68)
-reportScore(name: "E", zipCode: 94040, numberOfGames: 25, highScore: 79)
+reportScore(name: "A", zipCode: 94022, score: 98)
+reportScore(name: "B", zipCode: 94040, score: 85)
+reportScore(name: "C", zipCode: 78731, score: 46)
+reportScore(name: "D", zipCode: 78701, score: 68)
+reportScore(name: "E", zipCode: 94040, score: 79)
+reportScore(name: "A", zipCode: 94022, score: 75)
 
-printHighScore(of: playerHighScore) 
- 
-//need to have error message for high score if there are 0 players
+printHighScore(of: playerScore)
