@@ -1,74 +1,59 @@
-var playerName: [String] = []
-var playerZip: [Int] = []
-var playerNumberOfGames: [Int] = []
-var playerScore: [Int] = []
+struct Player {
+    var playerName: String
+    var playerScore: Int
+    var playerZipCode: Int
+    var playerNumberOfGames = 1
+    init(name: String, score: Int, zipCode: Int){
+        playerName = name
+        playerScore = score
+        playerZipCode = zipCode
+    }
+    
+}
 
+var players: [Player] = []
 var numberOfPlayers = 0
 
-func initialize() {
+func initialize (){
     numberOfPlayers = 0
 }
 
 func reportScore(name: String, zipCode: Int, score: Int){
     var isNew = true
     if numberOfPlayers != 0 {
-        for person in 1...numberOfPlayers {
-            if name == playerName[person - 1] {
+        for person in 0...(numberOfPlayers - 1){
+            if name == players[person].playerName{
                 isNew = false
-                playerNumberOfGames[person - 1] += 1
-                if score > playerScore[person - 1] {
-                    playerScore[person - 1] = score
+                players[person].playerNumberOfGames += 1
+                if score > players[person].playerScore{
+                    players[person].playerScore = score
                 }
             }
         }
     }
-    if isNew {
+    if isNew{
         numberOfPlayers += 1
-        playerName.append(name)
-        playerZip.append(zipCode)
-        playerNumberOfGames.append(1)
-        playerScore.append(score)
+        let aPlayer = Player(name: name, score: score, zipCode: zipCode)
+        players.append(aPlayer)
+        //update zipcode, numberofgames, score
     }
 }
 
-func sortScores(of: [Int]){
-    for i in 0...(playerScore.count - 2) {
-        for j in (i + 1)...(playerScore.count - 1) {
-            if playerScore[i] < playerScore[j] {
-                let holdScore = playerScore[i]
-                playerScore[i] = playerScore[j]
-                playerScore[j] = holdScore
-                let holdName = playerName[i]
-                playerName[i] = playerName[j]
-                playerName[j] = holdName
-                let holdZip = playerZip[i]
-                playerZip[i] = playerZip[j]
-                playerZip[j] = holdZip
-                let holdGames = playerNumberOfGames[i]
-                playerNumberOfGames[i] = playerNumberOfGames[j]
-                playerNumberOfGames[j] = holdGames
+func sortScores(of: [Player]){
+    for i in 0...(players.count - 2) {
+        for j in (i + 1)...(players.count - 1) {
+            if players[i].playerScore < players[j].playerScore{
+                let hold = players[i]
+                players[i] = players[j]
+                players[j] = hold
             }
         }
     }
-    print("NAME      SCORE")
-    for i in 0...4 {
-        print(playerName[i] + "         " + String(playerScore[i]))
+    print("NAME     SCORE")
+    for i in 0...4{
+        print(players[i].playerName + "        " + String(players[i].playerScore))
     }
 }
-
-func printHighScore(of: [Int]){
-    var highScore = playerScore[0]
-    var highScoreIndex = 0
-    for number in 1...numberOfPlayers {
-            if highScore < playerScore[number - 1]{
-            highScore = playerScore[number - 1]
-            highScoreIndex = number - 1
-        }
-    }
-    print("HIGH SCORE:" + "\n name: " + playerName[highScoreIndex] + "\n zipcode: " +  String(playerZip[highScoreIndex]) + "\n number of games played: " + String(playerNumberOfGames[highScoreIndex]) + "\n score: " + String(playerScore[highScoreIndex]))
-}
-
-initialize()
 
 reportScore(name: "A", zipCode: 94022, score: 98)
 reportScore(name: "B", zipCode: 94040, score: 85)
@@ -77,6 +62,5 @@ reportScore(name: "D", zipCode: 78701, score: 68)
 reportScore(name: "E", zipCode: 94040, score: 79)
 reportScore(name: "A", zipCode: 94022, score: 75)
 
-//print(playerScore)
-//printHighScore(of: playerScore)
-sortScores(of: playerScore)
+//print(players)
+sortScores(of: players)
