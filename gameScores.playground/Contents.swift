@@ -35,7 +35,6 @@ func reportScore(name: String, zipCode: Int, score: Int){
         numberOfPlayers += 1
         let aPlayer = Player(name: name, score: score, zipCode: zipCode)
         players.append(aPlayer)
-        //update zipcode, numberofgames, score
     }
 }
 
@@ -49,18 +48,18 @@ func sortScores(of: [Player]){
             }
         }
     }
-    print("NAME     SCORE")
+    print("NAME        SCORE")
     for i in 0...4{
-        print(players[i].playerName + "        " + String(players[i].playerScore))
+        print(players[i].playerName + "         " + String(players[i].playerScore))
     }
 }
 
-reportScore(name: "A", zipCode: 94022, score: 98)
-reportScore(name: "B", zipCode: 94040, score: 85)
-reportScore(name: "C", zipCode: 78731, score: 46)
-reportScore(name: "D", zipCode: 78701, score: 68)
-reportScore(name: "E", zipCode: 94040, score: 79)
-reportScore(name: "A", zipCode: 94022, score: 75)
+reportScore(name: "Hermione", zipCode: 94022, score: 98)
+reportScore(name: "Harry", zipCode: 94040, score: 85)
+reportScore(name: "Ron", zipCode: 78731, score: 46)
+reportScore(name: "Ginny", zipCode: 78701, score: 68)
+reportScore(name: "Neville", zipCode: 94040, score: 79)
+reportScore(name: "Hermione", zipCode: 94022, score: 75)
 
 //print(players)
 sortScores(of: players)
