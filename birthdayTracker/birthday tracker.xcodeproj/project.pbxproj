@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		375E177620FD2F4600CE445B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E177520FD2F4600CE445B /* AppDelegate.swift */; };
+		375E177820FD2F4600CE445B /* AddBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E177720FD2F4600CE445B /* AddBirthdayViewController.swift */; };
+		375E177B20FD2F4600CE445B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375E177920FD2F4600CE445B /* Main.storyboard */; };
+		375E177E20FD2F4600CE445B /* birthday_tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 375E177C20FD2F4600CE445B /* birthday_tracker.xcdatamodeld */; };
+		375E178020FD2F4600CE445B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375E177F20FD2F4600CE445B /* Assets.xcassets */; };
+		375E178320FD2F4600CE445B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375E178120FD2F4600CE445B /* LaunchScreen.storyboard */; };
+		37FF82E220FFC434004657C5 /* BirthdaysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF82E120FFC434004657C5 /* BirthdaysTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		375E177220FD2F4600CE445B /* birthday tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "birthday tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		375E177520FD2F4600CE445B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		375E177720FD2F4600CE445B /* AddBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayViewController.swift; sourceTree = "<group>"; };
+		375E177A20FD2F4600CE445B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		375E177D20FD2F4600CE445B /* birthday_tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = birthday_tracker.xcdatamodel; sourceTree = "<group>"; };
+		375E177F20FD2F4600CE445B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		375E178220FD2F4600CE445B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		375E178420FD2F4600CE445B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37FF82E120FFC434004657C5 /* BirthdaysTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdaysTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		375E176F20FD2F4500CE445B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		375E176920FD2F4500CE445B = {
+			isa = PBXGroup;
+			children = (
+				375E177420FD2F4600CE445B /* birthday tracker */,
+				375E177320FD2F4600CE445B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		375E177320FD2F4600CE445B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				375E177220FD2F4600CE445B /* birthday tracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		375E177420FD2F4600CE445B /* birthday tracker */ = {
+			isa = PBXGroup;
+			children = (
+				375E177520FD2F4600CE445B /* AppDelegate.swift */,
+				375E177720FD2F4600CE445B /* AddBirthdayViewController.swift */,
+				375E177920FD2F4600CE445B /* Main.storyboard */,
+				375E177F20FD2F4600CE445B /* Assets.xcassets */,
+				375E178120FD2F4600CE445B /* LaunchScreen.storyboard */,
+				375E178420FD2F4600CE445B /* Info.plist */,
+				375E177C20FD2F4600CE445B /* birthday_tracker.xcdatamodeld */,
+				37FF82E120FFC434004657C5 /* BirthdaysTableViewController.swift */,
+			);
+			path = "birthday tracker";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		375E177120FD2F4500CE445B /* birthday tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 375E178720FD2F4600CE445B /* Build configuration list for PBXNativeTarget "birthday tracker" */;
+			buildPhases = (
+				375E176E20FD2F4500CE445B /* Sources */,
+				375E176F20FD2F4500CE445B /* Frameworks */,
+				375E177020FD2F4500CE445B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "birthday tracker";
+			productName = "birthday tracker";
+			productReference = 375E177220FD2F4600CE445B /* birthday tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		375E176A20FD2F4500CE445B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Allison;
+				TargetAttributes = {
+					375E177120FD2F4500CE445B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 872JF455KQ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 375E176D20FD2F4500CE445B /* Build configuration list for PBXProject "birthday tracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 375E176920FD2F4500CE445B;
+			productRefGroup = 375E177320FD2F4600CE445B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				375E177120FD2F4500CE445B /* birthday tracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		375E177020FD2F4500CE445B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				375E178320FD2F4600CE445B /* LaunchScreen.storyboard in Resources */,
+				375E178020FD2F4600CE445B /* Assets.xcassets in Resources */,
+				375E177B20FD2F4600CE445B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		375E176E20FD2F4500CE445B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FF82E220FFC434004657C5 /* BirthdaysTableViewController.swift in Sources */,
+				375E177820FD2F4600CE445B /* AddBirthdayViewController.swift in Sources */,
+				375E177E20FD2F4600CE445B /* birthday_tracker.xcdatamodeld in Sources */,
+				375E177620FD2F4600CE445B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		375E177920FD2F4600CE445B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				375E177A20FD2F4600CE445B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		375E178120FD2F4600CE445B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				375E178220FD2F4600CE445B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		375E178520FD2F4600CE445B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		375E178620FD2F4600CE445B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		375E178820FD2F4600CE445B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 872JF455KQ;
+				INFOPLIST_FILE = "birthday tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acyhuang.birthday-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		375E178920FD2F4600CE445B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 872JF455KQ;
+				INFOPLIST_FILE = "birthday tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acyhuang.birthday-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		375E176D20FD2F4500CE445B /* Build configuration list for PBXProject "birthday tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				375E178520FD2F4600CE445B /* Debug */,
+				375E178620FD2F4600CE445B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		375E178720FD2F4600CE445B /* Build configuration list for PBXNativeTarget "birthday tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				375E178820FD2F4600CE445B /* Debug */,
+				375E178920FD2F4600CE445B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		375E177C20FD2F4600CE445B /* birthday_tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				375E177D20FD2F4600CE445B /* birthday_tracker.xcdatamodel */,
+			);
+			currentVersion = 375E177D20FD2F4600CE445B /* birthday_tracker.xcdatamodel */;
+			path = birthday_tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 375E176A20FD2F4500CE445B /* Project object */;
+}
