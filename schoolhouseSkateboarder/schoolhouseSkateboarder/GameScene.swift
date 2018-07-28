@@ -148,7 +148,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func startGame() {
         //reset to starting conditions
         gameState = .running
-        resetSkater()
+        resetSkater();
         score = 0
         scrollSpeed = startingScrollSpeed
         brickLevel = .low
@@ -339,8 +339,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func handleTap(tapGesture: UITapGestureRecognizer) {
         //make skater jump
         if gameState == .running {
-            skater.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 260.0))
-            run(SKAction.playSoundFileNamed("jump.wav", waitForCompletion: false))
+            if skater.isOnGround {
+                skater.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: 260.0))
+                run(SKAction.playSoundFileNamed("jump.wav", waitForCompletion: false))
+            }
         } else {
             //if game is not running
             if let menuLayer: SKSpriteNode = childNode(withName: "menuLayer") as? SKSpriteNode {
